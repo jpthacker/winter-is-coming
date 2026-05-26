@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.ts",
   "dependencies": {
+    "@tanstack/react-query": "5.100.14",
     "expo": "~56.0.5",
     "expo-status-bar": "~56.0.4",
     "react": "19.2.3",
@@ -12,6 +13,7 @@
   },
   "devDependencies": {
     "@types/react": "~19.2.2",
+    "jest": "30.4.2",
     "typescript": "~6.0.3"
   },
   "scripts": {
