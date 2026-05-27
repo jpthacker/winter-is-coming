@@ -19,7 +19,7 @@ export function transformWeatherResponse(
       temperature: Math.round(raw.current.temperature_2m),
       apparentTemperature: Math.round(raw.current.apparent_temperature),
       weatherCode: raw.current.weather_code,
-      isDay: raw.current.is_day === 1,
+      isDay: isDay,
       description: weatherMeta.description,
       icon: isDay ? weatherMeta.icon : (weatherMeta.nightIcon || weatherMeta.icon),
     },
