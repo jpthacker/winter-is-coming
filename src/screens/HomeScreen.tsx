@@ -1,4 +1,4 @@
-// src/screens/HomeScreen.tsx
+import { WeatherIcon } from '@/components/weatherIcon'
 import { useWeather } from '@/hooks/useWeather'
 import { ActivityIndicator } from 'react-native'
 
@@ -19,6 +19,7 @@ export function HomeScreen() {
       <p>
         {data!.current.description}, {data!.current.temperature}°C
       </p>
+      <WeatherIcon icon={data!.current.icon} />
       <h2>7-day forecast</h2>
       <ul>
         {data!.dailyForecast.map((day) => (
