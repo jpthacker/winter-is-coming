@@ -1,8 +1,6 @@
 export interface OpenMeteoResponse {
   latitude: number
   longitude: number
-  timezone: string
-  timezone_abbreviation: string
   current: {
     time: string
     temperature_2m: number
