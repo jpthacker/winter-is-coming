@@ -10,5 +10,7 @@ export function useWeather(
   return useQuery({
     queryKey: ['weather', latitude, longitude],
     queryFn: () => fetchWeather(latitude, longitude, locationName),
+    refetchInterval: 1000 * 60 * 15,      // refresh every 15 minutes
+    refetchIntervalInBackground: false,
   })
 }

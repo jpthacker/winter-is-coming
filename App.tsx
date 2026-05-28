@@ -5,7 +5,7 @@ import { SafeAreaProvider } from 'react-native-safe-area-context'
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
-      staleTime: 1000 * 60 * 15,
+      staleTime: 1000 * 60 * 14, // 14 minutes
       retry: 2,
     },
   },
