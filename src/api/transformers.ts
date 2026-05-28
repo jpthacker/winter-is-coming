@@ -24,7 +24,7 @@ export function transformWeatherResponse(
       icon: isDay ? weatherMeta.icon : (weatherMeta.nightIcon || weatherMeta.icon),
     },
     dailyForecast: raw.daily.time.map((dateString, i): ForecastDay => ({
-      date: new Date(`${dateString}T00:00:00`).toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'short' }),
+      date: new Date(`${dateString}T00:00:00`).toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric', month: 'short' }),
       description: WEATHER_META[raw.daily.weather_code[i]]?.description || DEFAULT_WEATHER_META.description,
       maxTemperature: Math.round(raw.daily.temperature_2m_max[i]),
       minTemperature: Math.round(raw.daily.temperature_2m_min[i]),

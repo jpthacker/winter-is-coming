@@ -1,5 +1,6 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { HomeScreen } from '@/screens/HomeScreen'
+import { SafeAreaProvider } from 'react-native-safe-area-context'
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -12,8 +13,10 @@ const queryClient = new QueryClient({
 
 export default function App() {
   return (
-    <QueryClientProvider client={queryClient}>
-      <HomeScreen />
-    </QueryClientProvider>
+    <SafeAreaProvider>
+      <QueryClientProvider client={queryClient}>
+        <HomeScreen />
+      </QueryClientProvider>
+    </SafeAreaProvider>
   )
 }
