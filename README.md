@@ -58,3 +58,5 @@ Likewise, I would've seperated out much of the transformation logic into dedicat
 I would've loved to have had the opportunity to experiment with Expo's app router for navigation, which I could've possibly made use of if I'd had the chance to implement the daily forecast as a carousel of weather cards.
 
 Other improvements could include dynamic styling based on weather conditions, the addition of extra weather measurements (easily added with just a few single line changes in the types, transformer and views), and a location feature, but this last addition would be more ambitious.
+
+Finally, I would've cleaned up the folder structure and removed unneccessary files that were added during `npx create-expo-app` initialization.
