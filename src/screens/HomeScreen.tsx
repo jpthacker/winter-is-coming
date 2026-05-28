@@ -39,6 +39,7 @@ export function HomeScreen() {
             <Text style={styles.temperature}>{data.current.temperature}°C</Text>
             <Text style={styles.description}>{data.current.description}</Text>
             <Text style={styles.feelsLike}>Feels like {data.current.apparentTemperature}°C</Text>
+            <Text style={styles.winterIsComing}>Winter is coming...</Text>
           </View>
         }
         renderItem={({ item }) => (
@@ -88,6 +89,12 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: '#888',
     marginTop: 4,
+  },
+  winterIsComing: {
+    fontSize: 14,
+    color: '#cc0000',
+    marginTop: 8,
+    fontWeight: '500',
   },
   forecastRow: {
     flexDirection: 'row',
